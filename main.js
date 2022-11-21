@@ -16,6 +16,8 @@ var app = new Vue({
 
     methods:{
         print(){
+            this.visible = false;
+            this.mailList = []
             for( i= 0; i < 10; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) =>{
